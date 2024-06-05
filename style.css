@@ -16,4 +16,8 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+
+.content{
+    height: calc(100vh - 200px);
+}
 }
