@@ -20,4 +20,6 @@ body{
 .content{
     height: calc(100vh - 200px);
 }
+ul{
+    list-style-type: none;
 }
