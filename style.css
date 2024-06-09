@@ -13,7 +13,8 @@ body{
 }
 
 .hidden{
-    display: none;
+    visibility: collapse;
+    display: none !important;
 }
 
 .center-align{
