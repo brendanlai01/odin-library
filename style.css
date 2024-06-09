@@ -33,6 +33,18 @@ body{
     background-color: var(--dark-grey);
 }
 
+.add{
+    display: inline-block;
+}
+
+#add-button{
+    border-radius: 100%;
+}
+
+#add-button img{
+    width: 100px;
+}
+
 .book{
     border: red 1px solid;
     width: 200px;
