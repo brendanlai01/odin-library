@@ -4,6 +4,7 @@ const bookItem = document.querySelector('.book');
 const dialog = document.querySelector("dialog");
 const closeButton = document.querySelector("#close");
 const addBook = document.querySelector('#add-book');
+const addButton = document.querySelector('#add-button');
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -29,6 +30,10 @@ function cloneBook(title, author, pages, read){
     clonedBook.querySelector('#completion').textContent = read;
     return bookList.prepend(clonedBook);
 }
+
+addButton.addEventListener("click", () => {
+    dialog.showModal();
+});
 
 closeButton.addEventListener("click", () => {
     dialog.close();
