@@ -1,6 +1,9 @@
 const myLibrary = [];
 const bookList = document.querySelector('.book-list');
 const bookItem = document.querySelector('.book');
+const dialog = document.querySelector("dialog");
+const closeButton = document.querySelector("#close");
+const addBook = document.querySelector('#add-book');
 
 function Book(title, author, pages, read) {
     this.title = title;
