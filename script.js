@@ -19,9 +19,10 @@ function addBookToLibrary(book) {
 
 function cloneBook(title, author, pages, read){
     let clonedBook = bookItem.cloneNode(true);
+    clonedBook.classList.remove('hidden');
     clonedBook.querySelector('#title').textContent = title;
     clonedBook.querySelector('#author').textContent = author;
     clonedBook.querySelector('#pages').textContent = pages;
     clonedBook.querySelector('#completion').textContent = read;
-    return bookList.appendChild(clonedBook);
+    return bookList.prepend(clonedBook);
 }
