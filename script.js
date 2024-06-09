@@ -14,4 +14,14 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
+    return cloneBook(book.title, book.author, book.pages, book.read);
+}
+
+function cloneBook(title, author, pages, read){
+    let clonedBook = bookItem.cloneNode(true);
+    clonedBook.querySelector('#title').textContent = title;
+    clonedBook.querySelector('#author').textContent = author;
+    clonedBook.querySelector('#pages').textContent = pages;
+    clonedBook.querySelector('#completion').textContent = read;
+    return bookList.appendChild(clonedBook);
 }
