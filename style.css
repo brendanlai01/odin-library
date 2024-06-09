@@ -90,6 +90,18 @@ body{
     padding: 4px 0px 4px 4px;
 }
 
+.form-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-buttons button{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 25%;
+    height: 2rem;
+}
+
 ul{
     list-style-type: none;
 }
