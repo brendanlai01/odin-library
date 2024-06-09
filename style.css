@@ -27,6 +27,21 @@ body{
     height: calc(100vh - 200px);
     background-color: var(--dark-grey);
 }
+
+.book{
+    border: red 1px solid;
+    width: 200px;
+    height: auto;
+    padding: 8px;
+}
+
+.book h4{
+    margin: 0;
+    color: blueviolet;
+}
+
+.book p{
+    margin: 8px;
 }
 
 .footer{
