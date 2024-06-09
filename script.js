@@ -31,6 +31,16 @@ function cloneBook(title, author, pages, read){
     return clonedBook;
 }
 
+function displayBooks(){
+    let reversedLibrary = myLibrary.slice().reverse();
+    let num = reversedLibrary.length;
+    reversedLibrary.forEach((book) =>{
+        let newBook = cloneBook(book.title, book.author, book.pages, book.read);
+        newBook.dataset.index = num;
+        num--;
+        bookList.prepend(newBook);
+    })
+}
 addButton.addEventListener("click", () => {
     dialog.showModal();
 });
