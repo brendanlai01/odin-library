@@ -17,13 +17,13 @@
         <ul class="book-list center-align">
             <li class="book hidden">
                 <h4>Title:</h4> 
-                <p id="title">1984</p>
+                <p class="title">1984</p>
                 <h4>Author:</h4> 
-                <p id="author">George Orwell</p>
+                <p class="author">George Orwell</p>
                 <h4>Pages:</h4> 
-                <p id="pages">328</p>
+                <p class="pages">328</p>
                 <h4>Completion Status:</h4> 
-                <p id="completion">Read</p>
+                <p class="completion">Read</p>
             </li>
             <li class="add">
                 <button id="add-button">
@@ -33,17 +33,17 @@
         </ul>
         <dialog class="book-modal">
             <form>
-                <label for="form-title"><h3>Title:</h3></label>
-                <input type="text" id="form-title" name="form-title">
-                <label for="form-author"><h3>Author:</h3></label>
-                <input type="text" id="form-author" name="form-author">
-                <label for="form-pages"><h3>Pages:</h3></label>
-                <input type="number" id="form-pages" name="form-pages">
-                <label for="form-read"><h3>Read or Not:</h3></label>
-                <input type="checkbox" id="form-read" name="form-read">
+                <label for="title"><h3>Title:</h3></label>
+                <input type="text" id="title" name="title">
+                <label for="author"><h3>Author:</h3></label>
+                <input type="text" id="author" name="author">
+                <label for="pages"><h3>Pages:</h3></label>
+                <input type="number" id="pages" name="pages">
+                <label for="read"><h3>Read or Not:</h3></label>
+                <input type="checkbox" id="read" name="read">
                 <div class="form-buttons">
                     <button id="add-book">Add Book</button>
-                    <button id="close">Close</button>
+                    <button id="close" type="button">Close</button>
                 </div>
             </form>
         </dialog>
