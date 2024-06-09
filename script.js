@@ -29,3 +29,7 @@ function cloneBook(title, author, pages, read){
     clonedBook.querySelector('#completion').textContent = read;
     return bookList.prepend(clonedBook);
 }
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
