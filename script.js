@@ -39,7 +39,7 @@ function displayBooks(){
         newBook.dataset.index = num;
         num--;
         bookList.prepend(newBook);
-    })
+    }) //used reversed array to compensate for prepend, wanted books to add behind add button
 }
 addButton.addEventListener("click", () => {
     dialog.showModal();
