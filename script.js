@@ -41,6 +41,26 @@ function displayBooks(){
         bookList.prepend(newBook);
     }) //used reversed array to compensate for prepend, wanted books to add behind add button
 }
+
+function readStatus(read){
+    return read ? 'Read' : 'Not Read';
+}
+
+function createBook(){
+    let newTitle = document.querySelector('#title').value;
+    let newAuthor = document.querySelector('#author').value;
+    let newPages = document.querySelector('#pages').value;
+    let newCompletion = document.querySelector('#read').checked;
+    let createdBook = new Book(newTitle, newAuthor, newPages, readStatus(newCompletion));
+    return addBookToLibrary(createdBook);
+}
+
+addBook.addEventListener("click", function(event){
+    event.preventDefault();
+    createBook();
+    displayBooks();
+});
+
 addButton.addEventListener("click", () => {
     dialog.showModal();
 });
