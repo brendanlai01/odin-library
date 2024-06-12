@@ -42,6 +42,13 @@ function displayBooks(){
     }) //used reversed array to compensate for prepend, wanted books to add behind add button
 }
 
+function updateDisplay(){
+    let shownBooks = document.querySelectorAll('[data-index]');
+    shownBooks.forEach((book) =>{
+        book.remove();
+    })
+}
+
 function readStatus(read){
     return read ? 'Read' : 'Not Read';
 }
@@ -58,6 +65,7 @@ function createBook(){
 addBook.addEventListener("click", function(event){
     event.preventDefault();
     createBook();
+    updateDisplay();
     displayBooks();
 });
 
