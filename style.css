@@ -17,6 +17,10 @@ body{
     display: none !important;
 }
 
+.white{
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(85deg) brightness(105%) contrast(101%);
+}
+
 .center-align{
     display: flex;
     align-items: center;
@@ -42,6 +46,12 @@ body{
 
 .add{
     display: inline-block;
+}
+
+.remove{
+    width: 40px;
+    background: none;
+    border: none;
 }
 
 #add-button{
