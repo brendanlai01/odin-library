@@ -21,6 +21,17 @@ function addBookToLibrary(book) {
     return cloneBook(book.title, book.author, book.pages, book.read);
 }
 
+function removeBook(book){
+    let index = book.parentElement.dataset.index;
+    console.log(index);
+    let removedBook = document.querySelector(`[data-index="${index}"]`);
+    console.log(removedBook);
+    if (index > -1) {
+        myLibrary.splice(index, 1);
+    }
+    return removedBook.remove();
+}
+
 function cloneBook(title, author, pages, read){
     let clonedBook = bookItem.cloneNode(true);
     clonedBook.classList.remove('hidden');
@@ -33,7 +44,7 @@ function cloneBook(title, author, pages, read){
 
 function displayBooks(){
     let reversedLibrary = myLibrary.slice().reverse();
-    let num = reversedLibrary.length;
+    let num = reversedLibrary.length - 1;
     reversedLibrary.forEach((book) =>{
         let newBook = cloneBook(book.title, book.author, book.pages, book.read);
         newBook.dataset.index = num;
