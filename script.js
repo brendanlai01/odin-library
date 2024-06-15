@@ -14,6 +14,10 @@ function Book(title, author, pages, read) {
     this.info = function() {
         return `${this.title} by ${this.author}, it is ${this.pages} pages long, ${this.read}`;
     };
+    this.switchCompletion = function(){
+        if(this.read === 'Read') return this.read = 'Not Read'
+        else return this.read = 'Read';
+    }
 }
 
 function addBookToLibrary(book) {
@@ -22,7 +26,7 @@ function addBookToLibrary(book) {
 }
 
 function removeBook(book){
-    let index = book.parentElement.dataset.index;
+    let index = book.parentElement.parentElement.dataset.index;
     console.log(index);
     let removedBook = document.querySelector(`[data-index="${index}"]`);
     console.log(removedBook);
@@ -39,6 +43,10 @@ function cloneBook(title, author, pages, read){
     clonedBook.querySelector('.author').textContent = author;
     clonedBook.querySelector('.pages').textContent = pages;
     clonedBook.querySelector('.completion').textContent = read;
+    if(read === 'Not Read'){
+        let button = clonedBook.querySelector('.change-button img');
+        button.src = 'icons/close-circle.svg';
+    }
     return clonedBook;
 }
 
@@ -58,6 +66,19 @@ function updateDisplay(){
     shownBooks.forEach((book) =>{
         book.remove();
     })
+}
+
+function changeRead(book){
+    let index = book.parentElement.parentElement.dataset.index;
+    let currentBook = document.querySelector(`[data-index="${index}"] .completion`);
+    let button = document.querySelector(`[data-index="${index}"] .change-button img`);
+    if(currentBook.textContent === 'Read'){
+        button.src = 'icons/close-circle.svg';
+    } else if(currentBook.textContent === 'Not Read'){
+        button.src = 'icons/check-circle.svg';
+    }
+    myLibrary[index].switchCompletion();
+    currentBook.textContent = myLibrary[index].read;
 }
 
 function readStatus(read){
