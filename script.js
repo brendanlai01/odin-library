@@ -1,6 +1,7 @@
 const myLibrary = [];
 const bookList = document.querySelector('.book-list');
 const bookItem = document.querySelector('.book');
+const form = document.querySelector('form');
 const dialog = document.querySelector("dialog");
 const closeButton = document.querySelector("#close");
 const addBook = document.querySelector('#add-book');
@@ -99,6 +100,8 @@ addBook.addEventListener("click", function(event){
     createBook();
     updateDisplay();
     displayBooks();
+    dialog.close();
+    form.reset();
 });
 
 addButton.addEventListener("click", () => {
