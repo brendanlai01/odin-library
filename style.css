@@ -48,11 +48,6 @@ body{
     display: inline-block;
 }
 
-.remove{
-    width: 40px;
-    background: none;
-    border: none;
-}
 
 #add-button{
     border-radius: 100%;
@@ -69,6 +64,12 @@ body{
     padding: 8px;
     display: inline-block;
     text-align: center;
+}
+
+.book button{
+    width: 40px;
+    background: none;
+    border: none;
 }
 
 .book h4{
