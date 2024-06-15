@@ -66,6 +66,11 @@ body{
     text-align: center;
 }
 
+.book-buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .book button{
     width: 40px;
     background: none;
