@@ -28,9 +28,7 @@ function addBookToLibrary(book) {
 
 function removeBook(book){
     let index = book.parentElement.parentElement.dataset.index;
-    console.log(index);
     let removedBook = document.querySelector(`[data-index="${index}"]`);
-    console.log(removedBook);
     if (index > -1) {
         myLibrary.splice(index, 1);
     }
